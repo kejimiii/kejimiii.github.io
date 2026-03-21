@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": "dubai-cookie",
+      "category": "スイーツ",
+      "emoji": "🍪",
+      "name": "ドバイもっちりクッキーピスタチオ6個",
+      "price": "¥2,980",
+      "review": "SNS話題のピスタチオもっちり",
+      "url": "items/dubai-cookie.html"
+    },
+    {
+      "id": "sendai-gyutan",
+      "category": "グルメ",
+      "emoji": "🐮",
+      "name": "仙台牛たんギフト5品詰",
+      "price": "¥8,800",
+      "review": "老舗の豪華牛たんセット",
+      "url": "items/sendai-gyutan.html"
+    },
+    {
+      "id": "flower-sweets",
+      "category": "ギフト",
+      "emoji": "🌸",
+      "name": "お花×スイーツギフト",
+      "price": "¥4,980",
+      "review": "母の日・お礼に最適",
+      "url": "items/flower-sweets.html"
+    },
+    {
+      "id": "matsusaka-steak",
+      "category": "グルメ",
+      "emoji": "🥩",
+      "name": "松阪牛A5サーロイン",
+      "price": "¥15,800",
+      "review": "肉工房のとろけるステーキ",
+      "url": "items/matsusaka-steak.html"
+    },
+    {
+      "id": "matsusaka-sukiyaki",
+      "category": "グルメ",
+      "emoji": "🍲",
+      "name": "松阪牛すき焼き700g",
+      "price": "¥12,800",
+      "review": "プロ選定の霜降りバランス",
+      "url": "items/matsusaka-sukiyaki.html"
+    },
+    {
+      "id": "kobe-wagyu",
+      "category": "グルメ",
+      "emoji": "🥢",
+      "name": "神戸牛すき焼き500g",
+      "price": "¥9,800",
+      "review": "ヒライの絶品霜降り",
+      "url": "items/kobe-wagyu.html"
+    }
+  ]
+}
