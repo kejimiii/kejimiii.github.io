@@ -1,15 +1,170 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>けじみぃの楽天ROOM｜全投稿商品レビュー</title>
-<meta name="description" content="けじみぃの楽天ROOM全投稿の詳細レビューまとめ。実際に使った感想と選び方のコツを公開。">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
-<style>/* 省略スタイル - 実際は完全版を使用 */</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>けじみぃの楽天ROOM｜楽天市場実投稿レビュー6選</title>
+  <meta name="description" content="けじみぃの楽天ROOM全投稿レビュー。ドバイクッキー、松阪牛、仙台牛たんなど実際に投稿した6商品の詳細レビューと選び方。">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Noto Sans JP',sans-serif;background:#fafafa;color:#333;line-height:1.6;}
+
+    .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 20px;background:linear-gradient(135deg,#fff 0%,#f8f9ff 50%,#e8f0ff 100%);}
+    .hero h1{font-size:clamp(2.5rem,8vw,4rem);font-weight:900;background:linear-gradient(90deg,#ff6b9d,#c44569);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1rem;}
+    .hero p{font-size:1.1rem;color:#555;max-width:500px;margin-bottom:2rem;}
+
+    .stats{background:#f8f9ff;padding:3rem 1rem;display:flex;justify-content:center;gap:4rem;flex-wrap:wrap;}
+    .stat{font-size:2.5rem;font-weight:900;color:#ff6b9d;}
+
+    .category-section{padding:4rem 1rem;background:#fff;}
+    .section-title{font-size:2.5rem;font-weight:900;text-align:center;margin-bottom:3rem;background:linear-gradient(90deg,#ff6b9d,#c44569);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+
+    .filters{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:3rem;}
+    .filter-btn{padding:1rem 2rem;background:#f0f0f0;color:#666;border:2px solid #e0e0e0;border-radius:50px;font-weight:700;cursor:pointer;transition:all .3s;}
+    .filter-btn.active,.filter-btn:hover{background:linear-gradient(90deg,#ff6b9d,#c44569);color:#fff;border-color:#ff6b9d;transform:translateY(-2px);}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2rem;max-width:1200px;margin:0 auto;}
+
+    .card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.1);text-decoration:none;color:inherit;display:block;transition:transform .3s;}
+    .card:hover{transform:translateY(-10px);}
+    .card-img{height:200px;background:#f8f9ff;display:flex;align-items:center;justify-content:center;font-size:4rem;}
+    .card-body{padding:1.5rem;}
+    .tag{background:linear-gradient(90deg,#ff6b9d,#c44569);color:#fff;padding:.5rem 1rem;border-radius:20px;font-size:.8rem;font-weight:700;display:inline-block;margin-bottom:1rem;}
+    .card-title{font-size:1.2rem;font-weight:800;margin-bottom:.5rem;}
+    .price{font-size:1.5rem;font-weight:900;color:#ff6b9d;margin-bottom:1rem;}
+    .review{color:#666;font-size:.95rem;}
+    .arrow{display:inline-block;background:linear-gradient(90deg,#ff6b9d,#c44569);color:#fff;padding:.5rem 1.5rem;border-radius:20px;font-weight:700;}
+
+    @media(max-width:768px){.stats{gap:2rem;justify-content:center;}.filters{flex-direction:column;align-items:center;}}
+  </style>
 </head>
 <body>
-<!-- ヒーロー + カテゴリフィルター + products.jsonから自動生成 -->
-<script src="dynamic.js"></script>
+
+  <!-- ヒーロー -->
+  <section class="hero">
+    <h1>けじみぃ</h1>
+    <p>楽天ROOM実投稿の<br>全6商品レビューまとめ<br>実際に使った感想を公開！</p>
+    <a href="#products" style="padding:1rem 3rem;background:linear-gradient(90deg,#ff6b9d,#c44569);color:#fff;text-decoration:none;border-radius:50px;font-weight:700;font-size:1.1rem;box-shadow:0 10px 30px rgba(255,107,157,.4);">商品を見る</a>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div><div class="stat">6</div>実投稿商品</div>
+    <div><div class="stat">★4.8</div>平均評価</div>
+    <div><div class="stat">毎日</div>更新中</div>
+  </div>
+
+  <!-- 商品一覧 -->
+  <section class="category-section" id="products">
+    <h2 class="section-title">🎁 実投稿商品レビュー</h2>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">全商品 (6)</button>
+      <button class="filter-btn" data-filter="グルメ">グルメ (4)</button>
+      <button class="filter-btn" data-filter="ギフト">ギフト (1)</button>
+      <button class="filter-btn" data-filter="スイーツ">スイーツ (1)</button>
+    </div>
+
+    <div class="grid">
+
+      <!-- ドバイクッキー -->
+      <a href="items/dubai-cookie.html" class="card" data-category="スイーツ">
+        <div class="card-img">🍪</div>
+        <div class="card-body">
+          <span class="tag">スイーツ</span>
+          <h3 class="card-title">ドバイもっちりクッキー ピスタチオ6個</h3>
+          <div class="price">¥2,980</div>
+          <p class="review">SNS話題！外サク中トロの新食感。ギフトにも◎</p>
+          <div class="arrow">レビュー読む</div>
+        </div>
+      </a>
+
+      <!-- 仙台牛たん -->
+      <a href="items/sendai-gyutan.html" class="card" data-category="グルメ">
+        <div class="card-img">🐮</div>
+        <div class="card-body">
+          <span class="tag">グルメ</span>
+          <h3 class="card-title">仙台牛たんギフトセット 5品</h3>
+          <div class="price">¥8,800</div>
+          <p class="review">老舗「牛たん料理閣」の豪華ギフト</p>
+          <div class="arrow">レビュー読む</div>
+        </div>
+      </a>
+
+      <!-- お花スイーツ -->
+      <a href="items/flower-sweets.html" class="card" data-category="ギフト">
+        <div class="card-img">🌸</div>
+        <div class="card-body">
+          <span class="tag">ギフト</span>
+          <h3 class="card-title">お花×スイーツギフトセット</h3>
+          <div class="price">¥4,980</div>
+          <p class="review">母の日・お礼にぴったりの癒しギフト</p>
+          <div class="arrow">レビュー読む</div>
+        </div>
+      </a>
+
+      <!-- 松阪牛ステーキ -->
+      <a href="items/matsusaka-steak.html" class="card" data-category="グルメ">
+        <div class="card-img">🥩</div>
+        <div class="card-body">
+          <span class="tag">グルメ</span>
+          <h3 class="card-title">松阪牛A5サーロインステーキ</h3>
+          <div class="price">¥15,800</div>
+          <p class="review">肉工房なかむらの口どけ最高ステーキ</p>
+          <div class="arrow">レビュー読む</div>
+        </div>
+      </a>
+
+      <!-- 松阪牛すき焼き -->
+      <a href="items/matsusaka-sukiyaki.html" class="card" data-category="グルメ">
+        <div class="card-img">🍲</div>
+        <div class="card-body">
+          <span class="tag">グルメ</span>
+          <h3 class="card-title">松阪牛すき焼き用 700g</h3>
+          <div class="price">¥12,800</div>
+          <p class="review">卸問屋直送の赤身霜降りバランス</p>
+          <div class="arrow">レビュー読む</div>
+        </div>
+      </a>
+
+      <!-- 神戸牛 -->
+      <a href="items/kobe-wagyu.html" class="card" data-category="グルメ">
+        <div class="card-img">🥢</div>
+        <div class="card-body">
+          <span class="tag">グルメ</span>
+          <h3 class="card-title">神戸牛黒毛和牛すき焼き500g</h3>
+          <div class="price">¥9,800</div>
+          <p class="review">ヒライの伝統の霜降りロース肉</p>
+          <div class="arrow">レビュー読む</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <script>
+    // カテゴリフィルター（JS軽量版）
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.card').forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => card.style.display = 'none', 300);
+          }
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
