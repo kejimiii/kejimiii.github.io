@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Rakuten Room</title>
+  <title>けじみぃの楽天ROOM｜楽天市場のおすすめ商品だけ厳選レビュー</title>
+  <meta name="description" content="けじみぃの楽天ROOMでは、楽天市場の本当におすすめできる商品を厳選して紹介。実際に使った感想や失敗しない選び方をレビュー形式でまとめています。" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Noto Sans JP', sans-serif;
-      background: #0d0d0d;
-      color: #fff;
+      background: #fafafa;
+      color: #333;
       min-height: 100vh;
     }
 
@@ -24,7 +25,7 @@
       justify-content: center;
       text-align: center;
       padding: 60px 20px;
-      background: linear-gradient(135deg, #1a0533 0%, #3b0a6b 40%, #a0006e 75%, #ff4e8c 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 40%, #e8f0ff 75%, #d4e4ff 100%);
       position: relative;
       overflow: hidden;
     }
@@ -32,7 +33,7 @@
       content: '';
       position: absolute;
       width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(255,78,140,0.3) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(212,228,255,0.4) 0%, transparent 70%);
       top: -100px; right: -100px;
       border-radius: 50%;
     }
@@ -40,7 +41,7 @@
       content: '';
       position: absolute;
       width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(160,0,110,0.4) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(232,240,255,0.5) 0%, transparent 70%);
       bottom: -80px; left: -80px;
       border-radius: 50%;
     }
@@ -49,21 +50,23 @@
     .avatar {
       width: 110px; height: 110px;
       border-radius: 50%;
-      border: 4px solid #ff4e8c;
+      border: 4px solid #ff6b9d;
       object-fit: cover;
       margin-bottom: 20px;
-      box-shadow: 0 0 30px rgba(255,78,140,0.6);
-      background: linear-gradient(135deg, #ff4e8c, #a0006e);
+      box-shadow: 0 8px 32px rgba(255,107,157,0.3);
+      background: #fff;
       display: flex; align-items: center; justify-content: center;
-      font-size: 48px;
       overflow: hidden;
+    }
+    .avatar img {
+      width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
     }
     .avatar-wrapper { display: flex; justify-content: center; }
 
     .hero h1 {
       font-size: clamp(2rem, 6vw, 3.5rem);
       font-weight: 900;
-      background: linear-gradient(90deg, #fff 0%, #ffb3d4 50%, #ff4e8c 100%);
+      background: linear-gradient(90deg, #333 0%, #ff6b9d 50%, #c44569 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -72,7 +75,7 @@
     }
     .hero p {
       font-size: clamp(0.95rem, 2.5vw, 1.2rem);
-      color: rgba(255,255,255,0.8);
+      color: #555;
       max-width: 520px;
       line-height: 1.7;
       margin-bottom: 36px;
@@ -81,19 +84,19 @@
     .cta-btn {
       display: inline-block;
       padding: 16px 48px;
-      background: linear-gradient(90deg, #ff4e8c, #a0006e);
+      background: linear-gradient(90deg, #ff6b9d, #c44569);
       color: #fff;
       font-size: 1.1rem;
       font-weight: 700;
       border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 8px 32px rgba(255,78,140,0.5);
+      box-shadow: 0 8px 32px rgba(255,107,157,0.4);
       transition: transform 0.2s, box-shadow 0.2s;
       letter-spacing: 0.05em;
     }
     .cta-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 14px 40px rgba(255,78,140,0.7);
+      box-shadow: 0 14px 40px rgba(255,107,157,0.6);
     }
 
     /* ===== SECTION COMMON ===== */
@@ -103,7 +106,7 @@
       font-size: clamp(1.4rem, 4vw, 2rem);
       font-weight: 900;
       margin-bottom: 48px;
-      background: linear-gradient(90deg, #ff4e8c, #c04fff);
+      background: linear-gradient(90deg, #ff6b9d, #c44569);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -111,7 +114,7 @@
 
     /* ===== STATS BAND ===== */
     .stats-band {
-      background: linear-gradient(90deg, #1a0533, #3b0a6b, #1a0533);
+      background: linear-gradient(90deg, #f8f9ff, #e8f0ff, #f8f9ff);
       padding: 40px 20px;
     }
     .stats-grid {
@@ -126,15 +129,15 @@
     .stat-number {
       font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 900;
-      background: linear-gradient(90deg, #ff4e8c, #c04fff);
+      background: linear-gradient(90deg, #ff6b9d, #c44569);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    .stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
+    .stat-label { font-size: 0.85rem; color: #666; margin-top: 4px; }
 
     /* ===== PRODUCTS ===== */
-    .products { background: #0d0d0d; }
+    .products { background: #fff; }
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -143,50 +146,59 @@
       margin: 0 auto;
     }
     .product-card {
-      background: linear-gradient(135deg, #1a0533, #200540);
-      border: 1px solid rgba(255,78,140,0.25);
+      background: #fff;
+      border: 1px solid #e0e0e0;
       border-radius: 20px;
       overflow: hidden;
       transition: transform 0.25s, box-shadow 0.25s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
     .product-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 16px 48px rgba(255,78,140,0.35);
+      box-shadow: 0 16px 48px rgba(255,107,157,0.2);
     }
     .product-img {
       width: 100%; height: 180px;
       object-fit: cover;
-      background: linear-gradient(135deg, #3b0a6b, #a0006e);
+      background: linear-gradient(135deg, #f8f9ff, #e8f0ff);
       display: flex; align-items: center; justify-content: center;
       font-size: 3rem;
     }
     .product-body { padding: 20px; }
     .product-tag {
       font-size: 0.7rem;
-      background: linear-gradient(90deg, #ff4e8c, #a0006e);
+      background: linear-gradient(90deg, #ff6b9d, #c44569);
       padding: 3px 10px;
       border-radius: 20px;
       display: inline-block;
       margin-bottom: 10px;
       font-weight: 700;
+      color: #fff;
     }
     .product-name {
       font-size: 0.95rem;
       font-weight: 700;
       margin-bottom: 8px;
       line-height: 1.5;
+      color: #333;
     }
     .product-price {
       font-size: 1.2rem;
       font-weight: 900;
-      color: #ff4e8c;
+      color: #ff6b9d;
       margin-bottom: 16px;
+    }
+    .product-review {
+      font-size: 0.8rem;
+      color: #666;
+      margin-bottom: 12px;
+      line-height: 1.4;
     }
     .product-link {
       display: block;
       text-align: center;
       padding: 10px;
-      background: linear-gradient(90deg, #ff4e8c, #a0006e);
+      background: linear-gradient(90deg, #ff6b9d, #c44569);
       color: #fff;
       text-decoration: none;
       border-radius: 10px;
@@ -197,14 +209,14 @@
     .product-link:hover { opacity: 0.85; }
 
     /* ===== ABOUT ===== */
-    .about { background: linear-gradient(180deg, #0d0d0d, #1a0533); }
+    .about { background: linear-gradient(180deg, #fff, #f8f9ff); }
     .about-inner {
       max-width: 640px;
       margin: 0 auto;
       text-align: center;
     }
     .about-inner p {
-      color: rgba(255,255,255,0.8);
+      color: #555;
       line-height: 1.9;
       font-size: 1rem;
       margin-bottom: 16px;
@@ -212,65 +224,55 @@
     .tag-list { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 24px; }
     .tag {
       padding: 6px 18px;
-      border: 1px solid rgba(255,78,140,0.5);
+      border: 1px solid #ff6b9d;
       border-radius: 50px;
       font-size: 0.85rem;
-      color: #ff4e8c;
+      color: #ff6b9d;
+      background: rgba(255,107,157,0.1);
     }
 
     /* ===== ROOM LINK ===== */
     .room-section {
-      background: linear-gradient(135deg, #3b0a6b, #a0006e, #ff4e8c);
+      background: linear-gradient(135deg, #f8f9ff, #e8f0ff, #ff6b9d);
       text-align: center;
       padding: 80px 20px;
     }
     .room-section h2 {
       font-size: clamp(1.5rem, 4vw, 2.4rem);
       font-weight: 900;
-      color: #fff;
+      color: #333;
       margin-bottom: 16px;
     }
-    .room-section p { color: rgba(255,255,255,0.85); margin-bottom: 36px; font-size: 1rem; }
+    .room-section p { color: #555; margin-bottom: 36px; font-size: 1rem; }
     .room-btn {
       display: inline-block;
       padding: 18px 56px;
-      background: #fff;
-      color: #a0006e;
+      background: linear-gradient(90deg, #ff6b9d, #c44569);
+      color: #fff;
       font-size: 1.1rem;
       font-weight: 900;
       border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 32px rgba(255,107,157,0.4);
       transition: transform 0.2s;
       letter-spacing: 0.05em;
     }
     .room-btn:hover { transform: translateY(-3px); }
 
-    /* ===== SNS ===== */
-    .sns-section { background: #0d0d0d; text-align: center; padding: 60px 20px; }
-    .sns-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 16px; }
-    .sns-link {
-      padding: 12px 28px;
-      border: 1px solid rgba(255,78,140,0.4);
-      border-radius: 50px;
-      color: rgba(255,255,255,0.8);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: background 0.2s, color 0.2s;
-    }
-    .sns-link:hover {
-      background: linear-gradient(90deg, #ff4e8c, #a0006e);
-      color: #fff;
-      border-color: transparent;
+    /* ===== ROOM BANNER ===== */
+    .room-banner {
+      background: linear-gradient(90deg, #f8f9ff, #e8f0ff);
+      text-align: center;
+      padding: 40px 20px;
     }
 
     /* ===== FOOTER ===== */
     footer {
-      background: #080808;
+      background: #f0f0f0;
       text-align: center;
       padding: 24px;
       font-size: 0.8rem;
-      color: rgba(255,255,255,0.3);
+      color: #888;
     }
   </style>
 </head>
@@ -280,11 +282,13 @@
   <section class="hero">
     <div class="hero-content">
       <div class="avatar-wrapper">
-        <div class="avatar">🌸</div>
+        <div class="avatar">
+          <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/708009c76e1102a784a3ff9ebb587e8bc52929f9.jpg" alt="柴犬とキジトラ猫が並んだ、けじみぃの楽天ROOMアイコン">
+        </div>
       </div>
       <h1>けじみぃ</h1>
-      <p>毎日をもっと豊かに。<br>厳選したとっておきのアイテムをご紹介します。<br>Rakuten Roomでお気に入りを見つけてね♪</p>
-      <a href="#products" class="cta-btn">✨ おすすめアイテムを見る</a>
+      <p>楽天で「失敗しない買い物」だけ集めました。<br>横浜在住のコンテンツクリエイターが本当に買ってよかった<br>グルメ・ペット用品・ギフトだけを厳選紹介しています。</p>
+      <a href="#products" class="cta-btn">今すぐ人気アイテムをチェックする →</a>
     </div>
   </section>
 
@@ -308,7 +312,7 @@
 
   <!-- PRODUCTS -->
   <section class="products" id="products">
-    <h2 class="section-title">✨ 今週のおすすめアイテム</h2>
+    <h2 class="section-title">✨ 楽天ROOMで見つけた楽天市場のおすすめ商品</h2>
     <div class="products-grid">
 
       <div class="product-card">
@@ -317,8 +321,10 @@
           <span class="product-tag">グルメ</span>
           <div class="product-name">【送料無料】A5ランク 黒毛和牛 すき焼き用 500g</div>
           <div class="product-price">¥8,980</div>
-          <!-- ↓ 楽天アフィリエイトURLに差し替えてください -->
-          <a href="https://room.rakuten.co.jp/" class="product-link" target="_blank" rel="nofollow">楽天で見る →</a>
+          <p class="product-review">
+            楽天市場のすき焼き用お肉の中でも、楽天ROOMで一番リピしているおすすめ商品。脂がしつこくなくて、とろけるのに重くないご褒美すき焼き用です。
+          </p>
+          <a href="https://room.rakuten.co.jp/room_e92d54f94f/items" class="product-link" target="_blank" rel="nofollow">楽天で見る →</a>
         </div>
       </div>
 
@@ -328,7 +334,10 @@
           <span class="product-tag">フルーツ</span>
           <div class="product-name">【期間限定】朝摘み 完熟いちご 2パックセット</div>
           <div class="product-price">¥3,480</div>
-          <a href="https://room.rakuten.co.jp/" class="product-link" target="_blank" rel="nofollow">楽天で見る →</a>
+          <p class="product-review">
+            楽天ROOMでも反応が良かった、楽天市場のフルーツ系おすすめ商品。酸味と甘みのバランスが絶妙で、子供も大人も大喜びのご褒美いちごです。
+          </p>
+          <a href="https://room.rakuten.co.jp/room_e92d54f94f/items" class="product-link" target="_blank" rel="nofollow">楽天で見る →</a>
         </div>
       </div>
 
@@ -338,7 +347,10 @@
           <span class="product-tag">ペット</span>
           <div class="product-name">猫用 国産 無添加おやつ グレインフリー 80g</div>
           <div class="product-price">¥1,280</div>
-          <a href="https://room.rakuten.co.jp/" class="product-link" target="_blank" rel="nofollow">楽天で見る →</a>
+          <p class="product-review">
+            添加物ゼロで安心してあげられる、楽天市場のペットフードの中でも特におすすめのおやつ。キジトラさんも夢中で食べる、けじみぃ一押しの楽天ROOM掲載アイテムです。
+          </p>
+          <a href="https://room.rakuten.co.jp/room_e92d54f94f/items" class="product-link" target="_blank" rel="nofollow">楽天で見る →</a>
         </div>
       </div>
 
@@ -348,7 +360,10 @@
           <span class="product-tag">ギフト</span>
           <div class="product-name">プレミアムギフトセット 贈り物に大人気</div>
           <div class="product-price">¥5,500</div>
-          <a href="https://room.rakuten.co.jp/" class="product-link" target="_blank" rel="nofollow">楽天で見る →</a>
+          <p class="product-review">
+            楽天ROOMでギフト需要の高い、楽天市場の定番おすすめ商品。見た目も豪華で、お返しや内祝いなど幅広いシーンで喜ばれるセットです。
+          </p>
+          <a href="https://room.rakuten.co.jp/room_e92d54f94f/items" class="product-link" target="_blank" rel="nofollow">楽天で見る →</a>
         </div>
       </div>
 
@@ -357,41 +372,38 @@
 
   <!-- ABOUT -->
   <section class="about">
-    <h2 class="section-title">🌸 About Me</h2>
+    <h2 class="section-title">🌸 About けじみぃ｜楽天ROOMで紹介しているジャンル</h2>
     <div class="about-inner">
-      <p>横浜在住のコンテンツクリエイターです。<br>食・ペット・ライフスタイルを中心に、本当に良かったものだけを厳選してご紹介しています。</p>
-      <p>Rakuten Roomでは毎日アイテムを更新中。お気に入り登録よろしくお願いします♪</p>
+      <p>横浜在住のコンテンツクリエイターです。楽天ROOMでは、楽天市場のグルメ・ペット用品・ギフトを中心に、本当に良かったおすすめ商品だけを厳選してご紹介しています。</p>
+      <p>実際に使った感想や、失敗しない選び方をわかりやすくまとめています。お気に入り登録してもらえると、新着アイテムもいち早くチェックできます♪</p>
       <div class="tag-list">
+        <span class="tag">#楽天ROOM</span>
+        <span class="tag">#楽天市場おすすめ</span>
         <span class="tag">#グルメ</span>
         <span class="tag">#ペット好き</span>
         <span class="tag">#おうち時間</span>
-        <span class="tag">#楽天ユーザー</span>
-        <span class="tag">#横浜</span>
       </div>
     </div>
   </section>
 
   <!-- ROOM CTA -->
   <section class="room-section">
-    <h2>🛍️ Rakuten Roomを<br>チェックしてね！</h2>
-    <p>全アイテムはRakuten Roomで公開中。<br>フォローするといち早く新着アイテムをチェックできます♪</p>
-    <!-- ↓ https://room.rakuten.co.jp/room_e92d54f94f/items -->
-    <a href="https://room.rakuten.co.jp/" class="room-btn" target="_blank">Rakuten Roomへ →</a>
+    <h2>🛍️ けじみぃのRakuten Roomを<br>チェックしてね！</h2>
+    <p>全アイテムは楽天ROOM上で公開中。楽天市場のお得なおすすめ商品を、ジャンル別にわかりやすくまとめています。フォローするといち早く新着アイテムをチェックできます♪</p>
+    <a href="https://room.rakuten.co.jp/room_e92d54f94f/items" class="room-btn" target="_blank">Rakuten Roomで全アイテムを見る →</a>
   </section>
 
-  <!-- SNS -->
-  <!-- <section class="sns-section">
-    <h2 class="section-title">📱 Follow Me</h2>
-    <!-- <div class="sns-links"> -->
-      <!-- ↓ 各SNSのURLに差し替えてください -->
-      <!-- <a href="#" class="sns-link">𝕏 Twitter / X</a>
-      <!-- <a href="#" class="sns-link">📸 Instagram</a> -->
-      <!-- <a href="#" class="sns-link">▶️ YouTube</a> --> -->
+  <!-- ROOM BANNER -->
+  <div class="room-banner">
+    <div style="text-align:center; max-width: 320px; margin: 0 auto;">
+      <a href="https://room.rakuten.co.jp/room_e92d54f94f/items" target="_blank">
+        <img src="https://room.rakuten.co.jp/campaign/bnr/common/myroom_banner.png" alt="けじみぃのROOM" style="width:100%; height:auto; border:0;">
+      </a>
     </div>
-  </section> -->
+  </div>
 
   <footer>
-    <p>© 2026 けじみぃ— Powered by Rakuten Room</p>
+    <p>© 2026 けじみぃ — Powered by Rakuten Room</p>
   </footer>
 
 </body>
