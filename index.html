@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>けじみぃの楽天ROOM｜グルメ・ペット・ギフトのおすすめ商品</title>
+  <title>けじみぃの楽天ROOM｜ファッション・美容・食品・家電のおすすめ</title>
   <meta name="description" content="けじみぃの楽天ROOMでは、楽天市場の本当におすすめできる商品をカテゴリ別に厳選して紹介。実際に使った感想や失敗しない選び方をレビュー形式でまとめています。" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet" />
   <style>
@@ -29,13 +29,13 @@
     .category-btn { padding: 6px 14px; border-radius: 999px; border: 1px solid #ddd; background: #fff; font-size: 0.8rem; cursor: pointer; }
     .category-btn.active { background: #ff6b9d; border-color: #ff6b9d; color: #fff; font-weight: 700; }
 
-    .product-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 14px; list-style: none; margin: 0; padding: 0; }
-    .product-card { background: #fff; border-radius: 14px; padding: 14px; border: 1px solid #e5e5e5; display: flex; flex-direction: column; gap: 4px; transition: box-shadow 0.2s, transform 0.2s; }
-    .product-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); transform: translateY(-2px); }
-    .product-tag { font-size: 0.7rem; display: inline-block; padding: 2px 10px; border-radius: 999px; background: #fff1f6; color: #ff6b9d; font-weight: 700; margin-bottom: 4px; }
-    .product-name { font-size: 0.9rem; font-weight: 700; }
-    .product-text { font-size: 0.8rem; color: #666; }
-    .product-link { font-size: 0.78rem; font-weight: 700; margin-top: 4px; color: #ff6b9d; }
+    .category-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 16px; }
+    .category-card { background: #fff; border-radius: 14px; padding: 20px; border: 1px solid #e5e5e5; display: flex; flex-direction: column; gap: 8px; transition: box-shadow 0.2s, transform 0.2s; text-align: center; }
+    .category-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); transform: translateY(-2px); }
+    .category-icon { font-size: 2.2rem; margin-bottom: 4px; }
+    .category-name { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+    .category-text { font-size: 0.82rem; color: #666; }
+    .category-link { font-size: 0.8rem; font-weight: 700; color: #ff6b9d; margin-top: 6px; }
 
     .about { font-size: 0.83rem; color: #555; }
     .about p { margin-bottom: 8px; }
@@ -48,92 +48,66 @@
     <div class="hero-inner">
       <div class="avatar-wrap">
         <div class="avatar">
-          <!-- 柴犬とキジトラ猫のアイコン画像。GitHub上では image.jpg などに差し替えてください -->
-          <img src="image.jpg" alt="柴犬とキジトラ猫のアイコン" />
+          <img src="kejimiii_icon.jpg" alt="柴犬とキジトラ猫のアイコン" />
         </div>
       </div>
       <p class="hero-label">Rakuten ROOM</p>
       <h1 class="hero-title">けじみぃの楽天ROOM</h1>
-      <p class="hero-text">楽天市場の「本当に買ってよかった」グルメ・ペット用品・ギフトだけをカテゴリ別にまとめました。実際に使った感想と、失敗しにくい選び方をコンパクトに紹介しています。</p>
-      <a href="#products" class="hero-btn">カテゴリ別のおすすめを見る</a>
+      <p class="hero-text">楽天市場の「本当に買ってよかった」商品をカテゴリ別にまとめました。各カテゴリページで、実際に使った感想や失敗しない選び方を詳しくレビューしています。</p>
+      <a href="#categories" class="hero-btn">カテゴリから探す</a>
     </div>
   </header>
 
   <main>
-    <section id="products" class="section">
+    <section id="categories" class="section">
       <h2 class="section-title">カテゴリから選ぶおすすめ商品</h2>
-      <p class="section-lead">まずは気になるカテゴリを選んでください。各商品ページでは、けじみぃ目線の正直レビューと、「こういう人に合う／合わない」を分かりやすく書いています。</p>
+      <p class="section-lead">気になるカテゴリをクリックすると、その中のおすすめ商品一覧に飛びます。「こういう人に合う／合わない」を正直に書いています。</p>
 
       <div class="category-nav">
         <button class="category-btn active" data-category="all">すべて</button>
-        <button class="category-btn" data-category="gourmet">グルメ</button>
-        <button class="category-btn" data-category="pet">ペット用品</button>
-        <button class="category-btn" data-category="gift">ギフト</button>
+        <button class="category-btn" data-category="fashion">レディースファッション</button>
+        <button class="category-btn" data-category="beauty">美容</button>
+        <button class="category-btn" data-category="food">食品一覧</button>
+        <button class="category-btn" data-category="home">家電</button>
       </div>
 
-      <ul class="product-list">
-        <!-- グルメ -->
-        <li data-category="gourmet">
-          <a href="https://room.rakuten.co.jp/room_e92d54f94f/1700232731120258" class="product-card" target="_blank" rel="nofollow">
-            <span class="product-tag">グルメ</span>
-            <p class="product-name">仙台牛たん・ご褒美ギフトセット</p>
-            <p class="product-text">厚みがあるのに固くなりにくく、家で専門店っぽい満足感が出せる牛たん。自宅用にもギフトにも使いやすいバランスの良さです。</p>
-            <span class="product-link">楽天ROOMで詳しく見る →</span>
-          </a>
-        </li>
-        <li data-category="gourmet">
-          <a href="https://room.rakuten.co.jp/room_e92d54f94f/1700232730644127" class="product-card" target="_blank" rel="nofollow">
-            <span class="product-tag">グルメ</span>
-            <p class="product-name">松阪牛すき焼き用セット</p>
-            <p class="product-text">脂の甘さはあるけれど、しつこすぎず最後までおいしく食べられるタイプ。特別な日のすき焼きにちょうどいいボリューム感です。</p>
-            <span class="product-link">楽天ROOMで詳しく見る →</span>
-          </a>
-        </li>
+      <div class="category-grid">
+        <a href="https://room.rakuten.co.jp/room_e92d54f94f/1800011658868378" class="category-card" data-category="fashion" target="_blank" rel="nofollow">
+          <div class="category-icon">👗</div>
+          <h3 class="category-name">レディースファッション</h3>
+          <p class="category-text">毎日着たくなる上質な服・小物。サイズ感や着回しやすさを実際に着てチェックしました。</p>
+          <span class="category-link">詳細を見る →</span>
+        </a>
 
-        <!-- ペット用品（リンクはダミーなので、あとでROOMのURLに差し替え） -->
-        <li data-category="pet">
-          <a href="https://room.rakuten.co.jp/room_e92d54f94f" class="product-card" target="_blank" rel="nofollow">
-            <span class="product-tag">ペット用品</span>
-            <p class="product-name">猫用・国産無添加おやつ</p>
-            <p class="product-text">キジトラさんが夢中で食べたお気に入りおやつ。添加物控えめで、毎日の「ちょっとごほうび」にちょうどいい安心感です。</p>
-            <span class="product-link">楽天ROOMで詳しく見る →</span>
-          </a>
-        </li>
-        <li data-category="pet">
-          <a href="https://room.rakuten.co.jp/room_e92d54f94f" class="product-card" target="_blank" rel="nofollow">
-            <span class="product-tag">ペット用品</span>
-            <p class="product-name">柴犬用・ふわふわベッド</p>
-            <p class="product-text">丸くなって寝るのが好きな子にちょうどいい深さのベッド。毛が付きすぎにくい生地感で、お手入れもそこまで大変じゃありません。</p>
-            <span class="product-link">楽天ROOMで詳しく見る →</span>
-          </a>
-        </li>
+        <a href="https://room.rakuten.co.jp/room_e92d54f94f/1800011658045261" class="category-card" data-category="beauty" target="_blank" rel="nofollow">
+          <div class="category-icon">💄</div>
+          <h3 class="category-name">美容</h3>
+          <p class="category-text">肌に合う／合わないを正直レビュー。プチプラからデパコスまで、続けやすいものを厳選。</p>
+          <span class="category-link">詳細を見る →</span>
+        </a>
 
-        <!-- ギフト -->
-        <li data-category="gift">
-          <a href="https://room.rakuten.co.jp/room_e92d54f94f/1700232730644127" class="product-card" target="_blank" rel="nofollow">
-            <span class="product-tag">ギフト</span>
-            <p class="product-name">お花とスイーツのセットギフト</p>
-            <p class="product-text">箱を開けたときの「わぁ」が撮りやすい見た目で、写真映えも◎。お礼やちょっとしたお祝いに失敗しにくい組み合わせです。</p>
-            <span class="product-link">楽天ROOMで詳しく見る →</span>
-          </a>
-        </li>
-        <li data-category="gift">
-          <a href="https://room.rakuten.co.jp/room_e92d54f94f" class="product-card" target="_blank" rel="nofollow">
-            <span class="product-tag">ギフト</span>
-            <p class="product-name">選べる高級グルメカタログ</p>
-            <p class="product-text">相手の好みが分からないときに頼れる一冊。お肉・スイーツ・海鮮など幅広いラインナップから選べるので、場面を選びません。</p>
-            <span class="product-link">楽天ROOMで詳しく見る →</span>
-          </a>
-        </li>
-      </ul>
+        <a href="https://room.rakuten.co.jp/room_e92d54f94f/1800011654756338" class="category-card" data-category="food" target="_blank" rel="nofollow">
+          <div class="category-icon">🍖</div>
+          <h3 class="category-name">食品一覧</h3>
+          <p class="category-text">ご褒美グルメや日常使いの食材。味・量・コスパを実際に食べて確かめたものだけ。</p>
+          <span class="category-link">詳細を見る →</span>
+        </a>
+
+        <a href="https://room.rakuten.co.jp/room_e92d54f94f/1800011664788340" class="category-card" data-category="home" target="_blank" rel="nofollow">
+          <div class="category-icon">⚡</div>
+          <h3 class="category-name">家電</h3>
+          <p class="category-text">使い勝手が良くて後悔しない家電。コンパクトなものから本格派までレビュー済み。</p>
+          <span class="category-link">詳細を見る →</span>
+        </a>
+      </div>
     </section>
 
     <section class="section">
       <h2 class="section-title">けじみぃについて</h2>
       <div class="about">
-        <p>横浜在住のコンテンツクリエイターです。楽天ROOMでは、グルメ・ペット用品・ギフトを中心に、「自分のお金で買ってよかった」と思えたものだけを紹介しています。</p>
-        <p>なるべく難しい専門用語は使わず、写真や一言コメントで直感的にイメージしやすいよう意識してまとめています。更新情報はROOMをフォローしてチェックしてもらえるとうれしいです。</p>
-        <p><a href="https://room.rakuten.co.jp/room_e92d54f94f/items" target="_blank" rel="nofollow" style="color:#ff6b9d;font-weight:700;">▶ けじみぃの楽天ROOMをもっと見る</a></p>
+        <p>横浜在住のコンテンツクリエイターです。楽天ROOMでは、ファッション・美容・食品・家電を中心に、自分のお金で買って「これは人にすすめたい」と思えたものだけをカテゴリ別に紹介しています。</p>
+        <p>各カテゴリページでは、実際に使った感想や「こういう人に合う／合わない」を分かりやすくまとめています。新着情報はROOMをフォローしてチェックしてください。</p>
+        <p><a href="https://room.rakuten.co.jp/room_e92d54f94f/items" target="_blank" rel="nofollow" style="color:#ff6b9d;font-weight:700;">▶ けじみぃの楽天ROOM全体を見る</a></p>
       </div>
     </section>
   </main>
@@ -144,7 +118,7 @@
 
   <script>
     const buttons = document.querySelectorAll('.category-btn');
-    const items = document.querySelectorAll('.product-list li');
+    const items = document.querySelectorAll('.category-card');
 
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
