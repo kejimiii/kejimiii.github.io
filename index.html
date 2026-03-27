@@ -5,42 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>けじみぃの楽天ROOM｜ファッション・美容・食品・家電のおすすめ</title>
   <meta name="description" content="けじみぃの楽天ROOMでは、楽天市場の本当におすすめできる商品をカテゴリ別に厳選して紹介。実際に使った感想や失敗しない選び方をレビュー形式でまとめています。" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Noto Sans JP', sans-serif; background: #fafafa; color: #333; line-height: 1.7; }
+    body { 
+      font-family: 'Noto Sans JP', sans-serif; 
+      background: linear-gradient(to bottom, #f0f9ff 0%, #e0f2fe 50%, #f1f5f9 100%); 
+      color: #366480; 
+      line-height: 1.7; 
+    }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; display: block; }
 
-    .hero { padding: 32px 16px 24px; text-align: center; background: linear-gradient(135deg,#fff,#f8f9ff,#e8f0ff); }
+    .hero { padding: 38px 20px 32px; text-align: center; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bfdbfe 100%); }
     .hero-inner { max-width: 960px; margin: 0 auto; }
-    .avatar-wrap { display: flex; justify-content: center; margin-bottom: 16px; }
-    .avatar { width: 96px; height: 96px; border-radius: 50%; overflow: hidden; border: 4px solid #ff6b9d; box-shadow: 0 6px 18px rgba(255,107,157,0.35); }
-    .hero-label { font-size: 0.75rem; color: #ff6b9d; font-weight: 700; margin-bottom: 6px; }
-    .hero-title { font-size: clamp(1.8rem,4vw,2.4rem); font-weight: 900; margin-bottom: 8px; }
-    .hero-text { font-size: 0.9rem; color: #555; max-width: 520px; margin: 0 auto 14px; }
-    .hero-btn { display: inline-block; margin-top: 6px; padding: 11px 28px; border-radius: 999px; background: linear-gradient(90deg,#ff6b9d,#c44569); color: #fff; font-weight: 700; font-size: 0.9rem; box-shadow: 0 6px 18px rgba(255,107,157,0.45); }
+    .avatar-wrap { display: flex; justify-content: center; margin-bottom: 22px; }
+    .avatar { width: 98px; height: 98px; border-radius: 50%; overflow: hidden; border: 3px solid #bfdbfe; box-shadow: 0 8px 24px rgba(59,130,246,0.15); }
+    .hero-label { font-size: 0.8rem; color: #60a5fa; font-weight: 600; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .hero-title { font-size: clamp(2rem,4.8vw,2.7rem); font-weight: 700; color: #1e40af; margin-bottom: 12px; }
+    .hero-text { font-size: 0.94rem; color: #5a6c8d; max-width: 560px; margin: 0 auto 20px; }
+    .hero-btn { display: inline-block; padding: 13px 34px; border-radius: 25px; background: linear-gradient(135deg,#60a5fa,#3b82f6); color: #fff; font-weight: 600; font-size: 0.94rem; box-shadow: 0 6px 20px rgba(96,165,250,0.3); transition: all 0.25s; position: relative; overflow: hidden; }
+    .hero-btn::after { content: '→'; margin-left: 8px; transition: margin-left 0.25s; }
+    .hero-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(96,165,250,0.4); }
+    .hero-btn:hover::after { margin-left: 12px; }
 
-    .section { max-width: 1000px; margin: 0 auto; padding: 24px 16px 32px; }
-    .section-title { font-size: 1.2rem; font-weight: 900; margin-bottom: 10px; }
-    .section-lead { font-size: 0.86rem; color: #555; margin-bottom: 14px; }
+    .section { max-width: 1000px; margin: 0 auto; padding: 32px 20px 40px; }
+    .section-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 14px; text-align: center; color: #1e40af; position: relative; }
+    .section-lead { font-size: 0.92rem; color: #5a6c8d; margin-bottom: 24px; text-align: center; }
 
-    .category-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
-    .category-btn { padding: 6px 14px; border-radius: 999px; border: 1px solid #ddd; background: #fff; font-size: 0.8rem; cursor: pointer; }
-    .category-btn.active { background: #ff6b9d; border-color: #ff6b9d; color: #fff; font-weight: 700; }
+    .category-nav { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; justify-content: center; }
+    .category-btn { padding: 9px 18px; border-radius: 22px; border: 1px solid #bfdbfe; background: #fff; font-size: 0.86rem; font-weight: 500; cursor: pointer; transition: all 0.25s; color: #366480; }
+    .category-btn:hover, .category-btn.active { background: linear-gradient(135deg,#60a5fa,#3b82f6); border-color: #3b82f6; color: #fff; box-shadow: 0 5px 16px rgba(96,165,250,0.25); transform: translateY(-1px); }
 
-    .category-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 16px; }
-    .category-card { background: #fff; border-radius: 14px; padding: 20px; border: 1px solid #e5e5e5; display: flex; flex-direction: column; gap: 8px; transition: box-shadow 0.2s, transform 0.2s; text-align: center; }
-    .category-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.06); transform: translateY(-2px); }
-    .category-icon { font-size: 2.2rem; margin-bottom: 4px; }
-    .category-name { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
-    .category-text { font-size: 0.82rem; color: #666; }
-    .category-link { font-size: 0.8rem; font-weight: 700; color: #ff6b9d; margin-top: 6px; }
+    .category-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(295px,1fr)); gap: 22px; }
+    .category-card { 
+      background: rgba(255,255,255,0.9); 
+      border-radius: 20px; 
+      padding: 26px; 
+      border: 1px solid #bfdbfe; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 14px; 
+      transition: all 0.3s; 
+      text-align: center; 
+      box-shadow: 0 6px 20px rgba(59,130,246,0.08); 
+      backdrop-filter: blur(8px); 
+    }
+    .category-card:hover { 
+      transform: translateY(-6px); 
+      box-shadow: 0 16px 40px rgba(59,130,246,0.15); 
+      border-color: #93c5fd; 
+    }
+    .category-icon { font-size: 3rem; margin: 0 auto 12px; opacity: 0.95; }
+    .category-name { font-size: 1.12rem; font-weight: 700; margin-bottom: 8px; color: #1e40af; }
+    .category-text { font-size: 0.88rem; color: #5a6c8d; }
+    .category-link { font-size: 0.86rem; font-weight: 600; color: #3b82f6; margin-top: 10px; letter-spacing: 0.5px; }
+    .category-link:hover { color: #1d4ed8; text-decoration: underline; }
 
-    .about { font-size: 0.83rem; color: #555; }
-    .about p { margin-bottom: 8px; }
+    .about { font-size: 0.88rem; color: #5a6c8d; text-align: center; max-width: 660px; margin: 0 auto; }
+    .about p { margin-bottom: 12px; }
 
-    footer { text-align: center; font-size: 0.72rem; color: #999; padding: 16px 12px 24px; }
+    footer { 
+      text-align: center; 
+      padding: 28px 20px; 
+      background: rgba(240,249,255,0.7); 
+      border-top: 1px solid #bfdbfe; 
+      margin-top: 48px; 
+    }
+    .footer-content { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .footer-avatar { width: 46px; height: 46px; border-radius: 50%; overflow: hidden; border: 2px solid #bfdbfe; box-shadow: 0 3px 10px rgba(59,130,246,0.15); }
+    .footer-text { font-size: 0.82rem; color: #7dd3fc; font-weight: 500; }
   </style>
 </head>
 <body>
@@ -76,28 +110,28 @@
           <div class="category-icon">👗</div>
           <h3 class="category-name">レディースファッション</h3>
           <p class="category-text">毎日着たくなる上質な服・小物。サイズ感や着回しやすさを実際に着てチェックしました。</p>
-          <span class="category-link">詳細を見る →</span>
+          <span class="category-link">詳細を見る</span>
         </a>
 
         <a href="https://room.rakuten.co.jp/room_e92d54f94f/1800011658045261" class="category-card" data-category="beauty" target="_blank" rel="nofollow">
           <div class="category-icon">💄</div>
           <h3 class="category-name">美容</h3>
           <p class="category-text">肌に合う／合わないを正直レビュー。プチプラからデパコスまで、続けやすいものを厳選。</p>
-          <span class="category-link">詳細を見る →</span>
+          <span class="category-link">詳細を見る</span>
         </a>
 
         <a href="https://room.rakuten.co.jp/room_e92d54f94f/1800011654756338" class="category-card" data-category="food" target="_blank" rel="nofollow">
           <div class="category-icon">🍖</div>
           <h3 class="category-name">食品一覧</h3>
           <p class="category-text">ご褒美グルメや日常使いの食材。味・量・コスパを実際に食べて確かめたものだけ。</p>
-          <span class="category-link">詳細を見る →</span>
+          <span class="category-link">詳細を見る</span>
         </a>
 
         <a href="https://room.rakuten.co.jp/room_e92d54f94f/1800011664788340" class="category-card" data-category="home" target="_blank" rel="nofollow">
           <div class="category-icon">⚡</div>
           <h3 class="category-name">家電</h3>
           <p class="category-text">使い勝手が良くて後悔しない家電。コンパクトなものから本格派までレビュー済み。</p>
-          <span class="category-link">詳細を見る →</span>
+          <span class="category-link">詳細を見る</span>
         </a>
       </div>
     </section>
@@ -107,13 +141,18 @@
       <div class="about">
         <p>横浜在住のコンテンツクリエイターです。楽天ROOMでは、ファッション・美容・食品・家電を中心に、自分のお金で買って「これは人にすすめたい」と思えたものだけをカテゴリ別に紹介しています。</p>
         <p>各カテゴリページでは、実際に使った感想や「こういう人に合う／合わない」を分かりやすくまとめています。新着情報はROOMをフォローしてチェックしてください。</p>
-        <p><a href="https://room.rakuten.co.jp/room_e92d54f94f/items" target="_blank" rel="nofollow" style="color:#ff6b9d;font-weight:700;">▶ けじみぃの楽天ROOM全体を見る</a></p>
+        <p><a href="https://room.rakuten.co.jp/room_e92d54f94f/items" target="_blank" rel="nofollow" style="color:#3b82f6;font-weight:600;">▶ けじみぃの楽天ROOM全体を見る</a></p>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 けじみぃ / Rakuten ROOM</p>
+    <div class="footer-content">
+      <div class="footer-avatar">
+        <img src="kejimiii_icon.jpg" alt="けじみぃアイコン" />
+      </div>
+      <div class="footer-text">© 2026 けじみぃ / Rakuten ROOM</div>
+    </div>
   </footer>
 
   <script>
